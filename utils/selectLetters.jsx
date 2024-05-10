@@ -1,6 +1,7 @@
 import englishDictionary from '../data/englishDictionary.json';
 import turkishDictionary from '../data/turkishDictionary.json';
 
+
 const shuffleLetters = (word) => {
   const shuffledWord = word.split('').sort(() => Math.random() - 0.5);
   return shuffledWord;
@@ -12,6 +13,7 @@ const selectLetters = (language) => {
   const selectedWord = dictionary[randomIndex];
   const shuffledLetters = shuffleLetters(selectedWord);
   return shuffledLetters;
+  
 };
 
 export default selectLetters;

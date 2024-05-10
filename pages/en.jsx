@@ -55,19 +55,24 @@ const GamePage = () => {
     router.push('/');
   };
 
+  const handleTR = () => {
+    router.push('/tr');
+  };
+
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="max-w-lg w-full px-4">
+      <button onClick={handleTR} className="absolute left-5 top-5 p-2 text-white bg-red-500 rounded hover:bg-red-700 transition duration-300" disabled={isTimeUp}>TR</button>
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">Spelling Game</h1>
-          <div className="text-xl mb-4">Letters: <span className="font-bold">{letters.join(' ')}</span></div>
+          <h1 className="text-3xl font-bold mb-4 text-oa">Spelling Game</h1>
+          <div className="text-xl mb-4 text-oa">Letters: <span className="font-bold">{letters.join(' ')}</span></div>
           <form onSubmit={handleSubmit} className="mb-4">
             <input type="text" value={inputWord} onChange={handleChange} placeholder="Enter the word" className="w-full px-4 py-2 mb-2 border border-gray-400 rounded" disabled={isTimeUp} />
-            <button type="submit" className="w-full px-4 py-2 bg-blue-500 text-white rounded" disabled={isTimeUp}>Submit</button>
+            <button type="submit" className="w-full px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition duration-300" disabled={isTimeUp}>Submit</button>
           </form>
-          <div className="text-xl mb-4">Time: {time > 0 ? `${Math.floor(time / 60).toString().padStart(2, '0')}:${(time % 60).toString().padStart(2, '0')}` : 'Times up!'}</div>
-          <div className="text-xl mb-4">Score: {score}</div>
-          {isTimeUp && <button onClick={handleReturn} className="px-4 py-2 bg-red-500 text-white rounded">Return</button>}
+          <div className="text-xl mb-4 text-oa">Time: {time > 0 ? `${Math.floor(time / 60).toString().padStart(2, '0')}:${(time % 60).toString().padStart(2, '0')}` : 'Times up!'}</div>
+          <div className="text-xl mb-4 text-oa">Score: {score}</div>
+          {isTimeUp && <button onClick={handleReturn} className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700 transition duration-300">Return</button>}
         </div>
       </div>
     </div>
