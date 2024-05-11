@@ -45,7 +45,7 @@ const GamePage = () => {
     if (inputWord.trim() === '') return;
   
     if (validateWord(inputWord, 'en')) {
-      setScore((prevScore) => prevScore + inputWord.length);
+      setScore((prevScore) => prevScore + inputWord.length*100);
       setTime((prevTime) => prevTime + 15);
       setNewWord();
     }
