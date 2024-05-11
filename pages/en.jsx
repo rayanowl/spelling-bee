@@ -11,6 +11,7 @@ const GamePage = () => {
   const [time, setTime] = useState(60);
   const [score, setScore] = useState(0);
   const [isTimeUp, setIsTimeUp] = useState(false);
+  
 
   useEffect(() => {
     setNewWord();
@@ -66,7 +67,7 @@ const GamePage = () => {
       <button onClick={handleTR} className="absolute left-5 top-5 p-2 text-white bg-red-500 rounded hover:bg-red-700 transition duration-300" disabled={isTimeUp}>TR</button>
         <div className="text-center">
           <h1 className="text-3xl font-bold mb-4 text-oa">Spelling Game</h1>
-          <div className="text-xl mb-4 text-oa">Letters:<div className="h-6"></div><div className="flex flex-wrap justify-center">{letters.map((letter, index) => (<div key={index} className="bg-gray-200 w-12 h-12 flex items-center justify-center mx-2 mb-2 rounded">{letter}</div>))}
+          <div className="text-xl mb-4 text-oa">Letters:<div className="h-6"></div><div className="flex flex-wrap justify-center">{letters.map((letter, index) => (<div key={index} className={"bg-gray-200 w-12 h-12 flex items-center justify-center mx-2 mb-2 rounded"}>{letter}</div>))}
   </div>
 </div>
           <form onSubmit={handleSubmit} className="mb-4">
