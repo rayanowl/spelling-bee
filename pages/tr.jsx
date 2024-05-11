@@ -44,7 +44,7 @@ const GamePage = () => {
   
     if (validateWord(inputWord, 'tr')) {
       setScore((prevScore) => prevScore + inputWord.length);
-      setTime((prevTime) => prevTime + 15); // Add 15 seconds
+      setTime((prevTime) => prevTime + 15);
       setNewWord();
     }
   

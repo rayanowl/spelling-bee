@@ -1,8 +1,8 @@
-import englishDictionary from '../data/englishDictionary.json';
-import turkishDictionary from '../data/turkishDictionary.json';
+import englishWords from '../data/englishDictionary.json';
+import turkishWords from '../data/turkishDictionary.json';
 
 const validateWord = (word, language) => {
-  const dictionary = language === 'en' ? englishDictionary : turkishDictionary;
+  const dictionary = language === 'en' ? englishWords : turkishWords;
   return dictionary.includes(word.toLowerCase());
 };
 

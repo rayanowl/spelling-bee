@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import selectLetters from '../utils/selectLetters';
 import validateWord from '../utils/validateWord';
 
+
 const GamePage = () => {
   const router = useRouter();
   const [letters, setLetters] = useState([]);
@@ -44,7 +45,7 @@ const GamePage = () => {
   
     if (validateWord(inputWord, 'en')) {
       setScore((prevScore) => prevScore + inputWord.length);
-      setTime((prevTime) => prevTime + 15); // Add 15 seconds
+      setTime((prevTime) => prevTime + 15);
       setNewWord();
     }
   
