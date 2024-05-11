@@ -12,16 +12,14 @@ const selectLetters = (language) => {
   const selectedWord = dictionary[randomIndex];
   let shuffledLetters = shuffleLetters(selectedWord);
 
-  // Define the alphabet based on the language
   const alphabet = language === 'en' ? 'abcdefghijklmnopqrstuvwxyz' : 'abcçdefgğhıijklmnoöprsştuüvyz';
 
-  // Add random letters from the alphabet until there are 7 letters
   while (shuffledLetters.length < 7) {
     const randomIndex = Math.floor(Math.random() * alphabet.length);
     shuffledLetters.push(alphabet[randomIndex]);
   }
 
-  return shuffledLetters.slice(0, 7); // Take the first 7 letters
+  return shuffledLetters.slice(0, 7);
 };
 
 export default selectLetters;

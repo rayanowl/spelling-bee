@@ -68,7 +68,9 @@ const GamePage = () => {
         <div className="text-center">
         <button onClick={handleEN} className="absolute left-5 top-5 p-2 text-white bg-gray-700 rounded hover:bg-gray-900 transition duration-300" disabled={isTimeUp}>EN</button>
           <h1 className="text-3xl font-bold mb-4 text-oa ">Kelime Bilmece Oyunu</h1>
-          <div className="text-xl mb-4 text-oa">Harfler: <span className="font-bold">{letters.join(' ')}</span></div>
+          <div className="text-xl mb-4 text-oa">Harfler: <div className="h-6"></div><div className="flex flex-wrap justify-center">{letters.map((letter, index) => (<div key={index} className="bg-gray-200 w-12 h-12 flex items-center justify-center mx-2 mb-2 rounded">{letter}</div>))}
+  </div>
+</div>
           <form onSubmit={handleSubmit} className="mb-4">
             <input type="text" value={inputWord} onChange={handleChange} placeholder="Kelime giriniz" className="w-full px-4 py-2 mb-2 border border-gray-400 rounded" disabled={isTimeUp} />
             <button type="submit" className="w-full px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition duration-300" disabled={isTimeUp}>Gönder</button>
