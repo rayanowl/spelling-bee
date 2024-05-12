@@ -4,16 +4,13 @@
 
 ```bash
 npm install
-
 npm run build
-
 npm start
 ```
 Initialize next app: 
 
 ```bash
 npx create-next-app (appName)
-
 cd (appName) .
 ```
 Add tailwind.css manually:
