@@ -1,4 +1,4 @@
-## Hello, welcome to Spelling Bee GamePage. In order to run this project:
+## Hello, Welcome to Spelling Bee GamePage. In order to run this project:
 
 ```bash
 npm install
