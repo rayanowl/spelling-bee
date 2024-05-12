@@ -14,12 +14,17 @@ npx create-next-app (appName)
 
 cd (appName) .
 ```
-Add tailwind.css manually & configure tailwind.config.js:
+Add tailwind.css manually:
 
 ```bash
 npm install -D tailwindcss
 npx tailwindcss init
 ```
+
+## About Project
+
+Spelling Bee is improved by using React (NextJS). The app consists of three pages and offers language options. (TR,EN) 15 seconds are added for each correct word found and extra point will be added according to word length. If the word is not found, Değiştir/Change  is pressed and the letters are renewed. Language can be changed by clicking the button in the upper left corner. When times up, the features are disabled and you can return to the main page by clicking Geri Dön/Return. 
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
