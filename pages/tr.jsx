@@ -62,6 +62,12 @@ const GamePage = () => {
     router.push('/en');
   };
 
+  const handleRestart = () => {
+    setLetters(selectLetters('tr'));
+    setInputWord('');
+    setMessage('');
+  };
+
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="max-w-lg w-full px-4">
@@ -77,6 +83,8 @@ const GamePage = () => {
           </form>
           <div className="text-xl mb-4 text-oa">Süre: {time > 0 ? `${Math.floor(time / 60).toString().padStart(2, '0')}:${(time % 60).toString().padStart(2, '0')}` : 'Süre doldu!'}</div>
           <div className="text-xl mb-4 text-oa">Puan: {score}</div>
+          <button onClick={handleRestart} disabled={isTimeUp}>Değiştir</button>
+          <div className="h-4"></div>
           {isTimeUp && <button onClick={handleReturn} className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700 transition duration-300">Geri Dön</button>}
         </div>
       </div>
