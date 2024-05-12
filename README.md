@@ -1,6 +1,6 @@
 ## Hello, Welcome to Spelling Bee GamePage. 
 
-***In order to run this project:***
+**In order to run this project:**
 
 ```bash
 npm install
