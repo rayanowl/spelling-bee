@@ -1,3 +1,27 @@
+Hello, welcome to Spelling Bee GamePage. In order to run this project:
+
+```bash
+npm install
+
+npm run build
+
+npm start
+```
+Initialize next app: 
+
+```bash
+npx create-next-app (appName)
+
+cd (appName) .
+```
+Add tailwind.css manually & configure tailwind.config.js:
+
+```bash
+npm install -D tailwindcss
+npx tailwindcss init
+```
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
